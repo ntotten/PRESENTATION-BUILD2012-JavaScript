@@ -1,0 +1,25 @@
+﻿<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+ <CodeSnippet Format="1.1.0">
+    <Header>
+      <Title>default.js - Socket.IO</Title>
+      <Author>DPE</Author>
+      <Shortcut>socketio</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Code Language="csharp">
+        <![CDATA[var socket = io.connect('http://localhost:3000');
+socket.on('news', function (data) {
+
+    var li = document.createElement("li");
+    li.textContent = data;
+
+    var messages = document.getElementById("messages");
+    messages.appendChild(li);
+});]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
